@@ -1,8 +1,8 @@
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const link = document.getElementById('link').value ?? 'https://www.olx.pl/purchase/activate/promote/?ad-id=931453689&bs=olx_pro_unpaid&delivery=true&selected-products=bundle_optimum&tr-id=tr.ee3e631f-ed06-4d6a-98e5-8128b532e5db&tr-visibility=true';
-    const continueProducts = parseInt(document.getElementById('productCount').value, 10) ?? 0;
+    const link = document.getElementById('link').value || 'https://www.olx.pl/purchase/activate/promote/?ad-id=931453689&bs=olx_pro_unpaid&delivery=true&selected-products=bundle_optimum&tr-id=tr.ee3e631f-ed06-4d6a-98e5-8128b532e5db&tr-visibility=true';
+    const continueProducts = parseInt(document.getElementById('productCount').value, 10) || 0;
     const inputFile = document.getElementById('code').value ?? '';
 
     const regexLink = /(.*\D)(\d{9})(.*)/;
