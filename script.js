@@ -8,11 +8,6 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     const regexLink = /(.*\D)(\d{9})(.*)/;
     const matchLink = regexLink.exec(link);
 
-    if (!matchLink) {
-        alert('Zły link. Nie ma 9 cyfer.');
-        return;
-    }
-
     const linkStart = matchLink[1];
     const linkEnd = matchLink[3];
 
