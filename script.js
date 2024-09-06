@@ -11,7 +11,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     const linkStart = matchLink[1];
     const linkEnd = matchLink[3];
 
-    const regexId = /<a href="\/d\/adding\/edit\/(\d+)\//g;
+    const regexId = /<span data-cy="ad-id">ID:\s*(\d+)<\/span>/g;
 
     const ids = [];
     let match;
